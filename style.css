@@ -7,7 +7,6 @@
 }
 
 img {
-  display: block;
   width: 100%;
 }
 
@@ -83,7 +82,7 @@ body {
 
 nav {
   position: fixed;
-  border: 2.4rem;
+  bottom: 2.4rem;
   left: 0;
   z-index: 100;
 }
