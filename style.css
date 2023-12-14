@@ -3,4 +3,150 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 13%);
+  overflow-x: hidden;
+}
+
+.wrapper {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 3.125rem;
+}
+
+.wrapper.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-wrapper {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: hsl(0, 100%, 74%);
+  height: 12.5rem;
+  width: 12.5rem;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.wrapper.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 1.625rem;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.wrapper.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  border: 2.4rem;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 1.875rem;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  margin: 2.5rem 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+nav a {
+  color: hsl(0, 0%, 98%);
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: hsl(0, 100%, 74%);
+  font-weight: bold;
+}
+
+.content {
+  max-width: 62.5rem;
+  margin: 3.125rem auto;
+}
+
+.content img {
+  padding-top: 1rem;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: hsl(0, 0%, 33%);
+  font-style: italic;
+}
+
+.content p {
+  padding: 1.5rem 0;
+  color: hsl(0, 0%, 20%);
+  line-height: 1.5;
 }
