@@ -107,7 +107,7 @@ nav ul li i {
 
 nav ul li + li {
   margin-left: 15px;
-  transform: translateX(150%);
+  transform: translateX(-150%);
 }
 
 nav ul li + li + li {
@@ -121,9 +121,12 @@ nav a {
   transition: all 0.5s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
   color: hsl(0, 100%, 74%);
   font-weight: bold;
+  border-bottom: 1px solid hsl(0, 100%, 74%);
+  transition: all 400ms ease-in-out;
 }
 
 .content {
